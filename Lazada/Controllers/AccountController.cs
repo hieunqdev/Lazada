@@ -28,6 +28,7 @@ namespace Lazada.Controllers
                            }).FirstOrDefault();
             if (account != null)
             {
+                HttpContext.Session.SetString("UserName", email);
                 return Redirect(Url.Action("Index", "Home"));
             }
             return View();

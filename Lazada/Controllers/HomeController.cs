@@ -15,6 +15,7 @@ namespace Lazada.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
             return View();
         }
 
